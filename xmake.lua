@@ -34,7 +34,7 @@ else
     set_runtimes("MD")
 end
 
-add_requires("hopscotch-map", "minhook", "spdlog", "tiltedcore")
+add_requires("hopscotch-map", "minhook", "spdlog", "tiltedcore", "mimalloc")
 
 target("Codeware")
     set_default(true)
@@ -45,7 +45,7 @@ target("Codeware")
     add_headerfiles("src/**.hpp", "lib/**.hpp")
     add_includedirs("src/", "lib/")
     add_deps("RED4ext.SDK", "clip", "nameof", "semver", "wil")
-    add_packages("hopscotch-map", "minhook", "spdlog", "tiltedcore")
+    add_packages("hopscotch-map", "minhook", "spdlog", "tiltedcore", "mimalloc")
     add_syslinks("Version", "User32")
     add_defines("WINVER=0x0601", "WIN32_LEAN_AND_MEAN", "NOMINMAX")
     set_configdir("src")
